@@ -4,13 +4,15 @@ import Constants from '../../common/Constants';
 import styles from './Home.style';
 import Button from '../../components/Button';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import {useNavigation} from '@react-navigation/native';
 
 const Home = props => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Pressable
         style={styles.searchBtn}
-        onPress={() => console.log('OK ne baby')}>
+        onPress={() => navigation.navigate('DestinationSearch')}>
         <Fontisto name="search" size={25} color="#f15454" />
         <Text style={styles.searchTextBtn}>
           {Constants.TEXT_WHERE_ARE_YOU_GOING}
