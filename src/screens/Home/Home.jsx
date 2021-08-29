@@ -11,6 +11,7 @@ const Home = props => {
       <Pressable
         style={styles.searchBtn}
         onPress={() => console.log('OK ne baby')}>
+        <Fontisto name="search" size={25} color="#f15454" />
         <Text style={styles.searchTextBtn}>
           {Constants.TEXT_WHERE_ARE_YOU_GOING}
         </Text>

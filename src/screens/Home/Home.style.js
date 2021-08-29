@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import Styles from '../../assets/styles';
 
 const styles = StyleSheet.create({
@@ -24,11 +24,16 @@ const styles = StyleSheet.create({
   },
   searchBtn: {
     backgroundColor: Styles.Colors.WHITE,
-    width: Styles.Size.rW200,
+    width: Dimensions.get('screen').width - 20,
     height: Styles.Size.rH40,
+    borderRadius: 16,
+    marginHorizontal: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute',
+    top: 100,
+    zIndex: 100,
   },
   searchTextBtn: {},
 });
